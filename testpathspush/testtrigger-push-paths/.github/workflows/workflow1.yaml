@@ -1,0 +1,14 @@
+name: test trigger events push paths
+on:
+  push:
+    branches:
+    - master
+    paths:
+    - 'hello/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: ls-l
